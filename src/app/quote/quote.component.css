@@ -1,9 +1,11 @@
 .btn{
-    margin-left: 30%;
     background-color: blue;
-    padding: 10px;
-    margin-bottom: 10%;
+    border-radius: 16px;
+    margin-left: 20%;
+    margin: 3%;
+    color: white;
+    font-size: 20px;
 }
-.Quot{
-    display: flex;
+.list{
+    font-size: 30px;
 }

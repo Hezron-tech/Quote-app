@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] =[
-      new Quote(1,'Hezzy','love','bean'),
-      new Quote( 2,'Kiprop','war','hey'),
-      new Quote(3,'ruth','coding','python')
+      new Quote(1,'Carol Burnett','love','Nothing is impossible. The word itself says ‘I’m possible!’”',newDate(1990,3,14)),
+      new Quote( 2,'Audrey Hepburn','Coding','It is a clear and straightforward message that don’t think negatively',newDate(1990,3,14)),
+      new Quote(3,'Michael Altshuler','Time','The bad news is time flies. The good news is you’re the pilot.',newDate(1990,3,14))
  
 
   ];
@@ -21,6 +21,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   
   }
+
+  completeQuote(isComplete:any, index:any){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {

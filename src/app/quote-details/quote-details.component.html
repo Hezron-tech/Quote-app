@@ -1,3 +1,17 @@
-<p>{{quote?.genre}}</p>
+<h1>{{quote?.Author}}</h1>
 <p>{{quote?.name}}</p>
+
+<div class="likes">
+    <h2>Number of likes:</h2>
+<button class="btn btn-success" (click)="likeButtonClick()">like</button>
+<span>{{numberOfLike}}</span>
+<button class="btn btn-danger" (click)="dislikeButtonClick()">Dislike</button>
+<span>{{numberOfDislike}}</span>
+</div>
+
+
+<button class="del" (click)= 'quoteComplete(true)'>Delete</button>
+
+
+
 

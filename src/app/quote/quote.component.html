@@ -3,10 +3,10 @@
     <hr>
     <div class="Quot">
         <ul>
-            <li *ngFor='let quote of quotes; let i=index'>
-              {{quote.Author}}
+            <li class="list" *ngFor='let quote of quotes; let i=index'>
+              {{quote.genre}}
               <button class="btn" (click)='toggleDetails(i)'>VIEW QUOTE</button>
-              <app-quote-details *ngIf='quote.showAuthor' [quote]="quote"></app-quote-details>
+              <app-quote-details *ngIf='quote.showAuthor' [quote]="quote" (isComplete)="completeQuote($event,i)" ></app-quote-details>
               
             </li>
           </ul>
