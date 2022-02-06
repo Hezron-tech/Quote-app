@@ -1,23 +1,23 @@
 
-    <h1>My Quotes</h1>
+    <h2 class="head"> Favourites Quotes</h2>
     <hr>
     <div class="row">
-    <div class="col-md-6">
+   
     <div class="Quot">
         <ul>
             <li class="list" *ngFor='let quote of quotes; let i=index'>
               {{quote.genre}}
+              
               <button class="btn" (click)='toggleDetails(i)'>VIEW QUOTE</button>
               <app-quote-details *ngIf='quote.showAuthor' [quote]="quote" (isComplete)="completeQuote($event,i)" ></app-quote-details>
               
             </li>
           </ul>
     </div>
-  </div>
+  
 
-  <div class="col-md-6">
-    <div class="col-md-6">
+  
+    <div class="add">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
  </div>
   </div>
-</div>

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  [x: string]: any;
 
   quotes:Quote[] =[
       new Quote(1,'Carol Burnett','love','Nothing is impossible. The word itself says ‘I’m possible!’”',new Date(1990,3,14)),
@@ -31,7 +32,8 @@ export class QuoteComponent implements OnInit {
 
   addNewQuote(Quote:any){
     let goalLength = this.quotes.length;
-    Quote.id = goalLength+1;
+    
+   
     Quote.completeDate = new Date(Quote.completeDate)
     this.quotes.push(Quote)
   }
