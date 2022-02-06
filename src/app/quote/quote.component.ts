@@ -10,13 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] =[
-      {id:1,Author:'Hezzy',genre:'love',name:'bean'},
-      {id:1,Author:'Hezzy',genre:'love',name:'bean'},
-      {id:1,Author:'Hezzy',genre:'love',name:'bean'}
-
+      new Quote(1,'Hezzy','love','bean'),
+      new Quote( 2,'Kiprop','war','hey'),
+      new Quote(3,'ruth','coding','python')
+ 
 
   ];
 
+  toggleDetails(index:any){
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  
+  }
   constructor() { }
 
   ngOnInit(): void {
