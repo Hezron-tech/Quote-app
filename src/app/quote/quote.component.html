@@ -1,6 +1,8 @@
-<div>
+
     <h1>My Quotes</h1>
     <hr>
+    <div class="row">
+    <div class="col-md-6">
     <div class="Quot">
         <ul>
             <li class="list" *ngFor='let quote of quotes; let i=index'>
@@ -12,3 +14,8 @@
           </ul>
     </div>
   </div>
+
+  <div class="col-md-6">
+    <app-quote-form></app-quote-form>
+  </div>
+</div>
